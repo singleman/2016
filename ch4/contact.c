@@ -1,28 +1,37 @@
-#include<stdio.h>
-#include<string.h>
-#define LEN 40
-#define STR_CON struct contact
-#define LIST struct list
+#include"contact.h"
 
-enum class {friend,family,schoolmate};
-
-struct contact{
-	char name[LEN],company[LEN];address[LEN],email[LEN];
-	char mobile[15],telephone[15],QQ[15];
-	enum class label;
-
-};
-
-struct list{
-	struct contact *sc;
-	int size;
-	int Maxsize;
-};
-
-void init(LIST *pt,int ms);
-void manual_input(LIST *pt);
-void file_input(LIST *pt);
-void find(LIST *pt);
-void delete(LIST *pt,char );
-void alter(LIST *pt,char );
-void output(LIST *pt,char );
+int main()
+{
+	LIST pt;
+	int choice;
+	void (*pfun)(LIST *);  //pointer to a function 14.16
+	init(&pt,10);
+	while((choice = get_choice()) != 'q')
+	{
+		switch(choice)
+		{
+			case 'a':
+				  break;
+			case 'c':
+				  break;
+			case 'd':
+				  break;
+			case 'f':
+				  break;
+			case 's':
+				  break;
+			case 'l': 
+				  break;
+			default : printf("Program error\n");
+				  break;
+		}
+		system("clear");	//this work!
+		//clear();
+		//pfun(&pt);
+		//clear();
+	}
+	
+	printf("ByeBye~see you later\n");
+	clearlist(&pt);
+	return 0;
+}
